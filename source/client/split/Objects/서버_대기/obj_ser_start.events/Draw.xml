@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="DRAW" id="0">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">if text_ok=1
+{
+for(i=0; i!=13; i+=1)
+{
+sk_draw_kr_string(498, 90+(i*20), text[i], c_white)
+}
+
+sk_draw_kr_string(600, 540, global.maker, c_white)
+sk_draw_kr_string(600, 560, global.version, c_white)
+}
+</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>

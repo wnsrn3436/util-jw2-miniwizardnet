@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="DRAW" id="0">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">sk_sex_set_font(0);
+
+draw_sprite(sprite_index, image_index, x, y)
+
+sk_draw_kr_string(x+5, y+2, chat, c_white)
+
+if image_index=1
+{
+var add_ddd; add_ddd=""
+for(i=0; i!=string_length(chat); i+=1){add_ddd+=" "}
+
+if alarm[0]&gt;10{sk_draw_kr_string(x, y+2, add_ddd+"|", c_white)}
+}
+
+var umber;
+umber=0
+
+for(i=key_start_key; i!=key_max+key_start_key; i+=1)
+{
+if global.yousgood&gt;i
+{
+pos_1=string_pos("- ", key_number[i])
+st1_1=string_delete(key_number[i], 1, pos_1)
+st1_2=string_delete(key_number[i], pos_1+1, string_length(key_number[i]))
+
+var add_ddd; add_ddd=""
+for(j=0; j!=string_length(st1_2); j+=1){add_ddd+=" "}
+
+sk_draw_kr_string(x+2, y+50-key_size-umber*key_size2, st1_2, c_orange)
+sk_draw_kr_string(x+2, y+50-key_size-umber*key_size2, add_ddd+st1_1, c_white)
+}
+umber+=1
+}
+
+sk_sex_set_font(1);
+</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>

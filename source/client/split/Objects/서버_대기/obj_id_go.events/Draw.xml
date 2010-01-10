@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="DRAW" id="0">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">draw_sprite(sprite_index, image_index, x, y)
+
+
+sk_draw_midd_text(x, y-6, ids, c_white, 6)
+
+if image_index=1
+{
+var add_ddd; add_ddd=""
+for(i=0; i!=string_length(ids); i+=1){add_ddd+=" "}
+
+if alarm[0]&gt;10{sk_draw_midd_text(x, y-6, add_ddd+"|", c_white, 6)}
+}
+</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="CREATE" id="0">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">message_background(bac_message)
+//메시지 화면설정
+sk_sex_set_font(1);
+//폰트설정
+message_button(spr_buttom_mess_ok)
+//메시지 ok버턴 설정
+
+text[9999]=""
+text_ok=0
+
+global.maker=""
+global.version=""
+global.playerlist="|"
+
+global.time=2
+//스크률주기
+global.image_ch_speed=10
+//이미지 체인지속도
+global._unit1=obj_ser_lobby
+//간편 오브젝지정
+global._unit2=obj_ser_chatting
+//간편 오브젝지정
+</argument>
+      </arguments>
+    </action>
+    <action id="605" library="1">
+      <!--action name: Comment-->
+      <kind>NORMAL</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>false</canApplyTo>
+      <actionType>NONE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">기본설정</argument>
+      </arguments>
+    </action>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">if file_exists("Server_Infor.ini")=0{show_message_ext("ini파일이 없습니다.  ", "X", "", ""); game_end()}
+else
+{
+ini_open("Server_Infor.ini")
+
+global.ip=ini_read_string("Server", "ip", "")
+global.name=ini_read_string("Server", "name", "")
+
+ini_close()
+
+if global.ip=""{show_message_ext("ip주소가 잘못되었습니다.  ", "X", "", ""); game_end()}
+}
+</argument>
+      </arguments>
+    </action>
+    <action id="605" library="1">
+      <!--action name: Comment-->
+      <kind>NORMAL</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>false</canApplyTo>
+      <actionType>NONE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">ini 로드</argument>
+      </arguments>
+    </action>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">mplay_init_tcpip(global.ip)
+
+if mplay_session_find()&gt;0
+{
+mplay_session_join(0, global.name)
+on_mess_send(0, 0, 1)
+}
+else
+{
+show_message_ext("서버가 닫혀있습니다.  ", "X", "", "")
+game_end()
+}
+</argument>
+      </arguments>
+    </action>
+    <action id="605" library="1">
+      <!--action name: Comment-->
+      <kind>NORMAL</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>false</canApplyTo>
+      <actionType>NONE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">참가</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>

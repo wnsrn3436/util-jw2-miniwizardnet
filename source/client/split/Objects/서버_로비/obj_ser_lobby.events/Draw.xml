@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="DRAW" id="0">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">if click_number&gt;=key_start_key and click_number&lt;=key_start_key+key_max-1
+{
+draw_set_alpha(0.3)
+draw_set_color(c_aqua)
+draw_rectangle(7+obj_status_1.x, 65+(click_number-key_start_key)*key_size2+key_size, 5-obj_status_1.x+sprite_get_width(spr_b1)-1, 65+(click_number-key_start_key)*key_size2+key_size+key_size2, 0)
+draw_set_color(c_black)
+draw_set_alpha(1)
+//몸체
+draw_rectangle(7+obj_status_1.x, 65+(click_number-key_start_key)*key_size2+key_size, 5-obj_status_1.x+sprite_get_width(spr_b1)-1, 65+(click_number-key_start_key)*key_size2+key_size+key_size2, 1)
+//테두리
+}
+</argument>
+      </arguments>
+    </action>
+    <action id="605" library="1">
+      <!--action name: Comment-->
+      <kind>NORMAL</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>false</canApplyTo>
+      <actionType>NONE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">선택한거 박스</argument>
+      </arguments>
+    </action>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">sk_draw_kr_string(52, 144, "---------------접속자 명단---------------", c_blue)
+
+var umber;
+umber=0
+
+global.soisgood=sk_dit_car(global.playerlist, 0, '|')
+
+for(i=key_start_key; i!=key_max+key_start_key; i+=1)
+{
+if global.soisgood&gt;i
+{
+sk_draw_kr_string(52, 65+key_size+umber*key_size2, explode[0, i], c_white)
+}
+umber+=1
+}
+//글자그리기
+</argument>
+      </arguments>
+    </action>
+    <action id="605" library="1">
+      <!--action name: Comment-->
+      <kind>NORMAL</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>false</canApplyTo>
+      <actionType>NONE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">접속인간</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>

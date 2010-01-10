@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="MOUSE" id="56">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">if obj_status_1.ok=1
+{
+
+for(i=0; i!=key_max; i+=1)
+{
+if mouse_y&gt;65+key_size+(i*key_size2)-1 and mouse_y&lt;65+key_size+(i*key_size2)+key_size2-1
+{
+if global.soisgood&gt;i
+{
+click_number=key_start_key+i
+//클릭된곳을 계산
+}
+}
+}
+
+}
+</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>

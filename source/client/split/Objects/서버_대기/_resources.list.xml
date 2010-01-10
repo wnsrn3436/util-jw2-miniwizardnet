@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+  <resource name="obj_ser_start" type="RESOURCE"/>
+  <resource name="obj_id_go" type="RESOURCE"/>
+  <resource name="obj_ps_go" type="RESOURCE"/>
+  <resource name="obj_idps_ok" type="RESOURCE"/>
+  <resource name="obj_idps_join" type="RESOURCE"/>
+  <resource name="obj_end_ed_1" type="RESOURCE"/>
+</resources>

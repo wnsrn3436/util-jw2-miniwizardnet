@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="OTHER" id="3">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">mplay_player_find()
+on_mess_send(0, 9, mplay_player_name(0))
+
+mplay_session_end()
+//방에서 나갑니다
+mplay_end()
+//멀티에서 나갑니다
+</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="MOUSE" id="0">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">if alarm[0]=-1{yy=mouse_y; alarm[0]=1}
+//마우스값 얻기
+
+if alarm[0]&gt;-1
+{
+
+if mouse_y&gt;yy{global._unit1.key_start_key+=mouse_y-yy}
+//아래로 스크롤
+if mouse_y&lt;yy{global._unit1.key_start_key-=yy-mouse_y}
+//위로 스크롤
+
+if global._unit1.key_start_key&gt;global.soisgood-global._unit1.key_max
+{
+global._unit1.key_start_key=global.soisgood-global._unit1.key_max
+}
+if global._unit1.key_start_key&lt;0
+{
+global._unit1.key_start_key=0
+}
+//최대,최소값 넘으면 조정
+
+}
+//마우스 스크롤
+</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>

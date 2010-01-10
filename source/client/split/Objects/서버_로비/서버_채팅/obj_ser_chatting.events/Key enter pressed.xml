@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="KEYPRESS" id="13">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">if image_index=1 and chat!=""
+{
+keyboard_key_press(vk_left)
+if image_index=1 and 35&gt;=string_length(keyboard_string)
+{
+chat=keyboard_string
+}
+if image_index=1 and 35&lt;string_length(keyboard_string){keyboard_string=chat}
+//채팅갖기
+
+global.yousgood+=1
+var key_number3; key_number3=global.yousgood
+
+while(key_number3!=0)
+{
+key_number[key_number3]=key_number[key_number3-1];key_number3-=1
+}
+
+mplay_player_find()
+key_number[0]=mplay_player_name(0)+' - '+chat
+
+chat=""
+keyboard_string=""
+
+on_mess_send(0, 10, key_number[0])
+}
+</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+  <resource name="문자열_나누기" type="GROUP"/>
+  <resource name="멀티_관련" type="GROUP"/>
+  <resource name="헥스" type="GROUP"/>
+  <resource name="한글_드로우" type="GROUP"/>
+  <resource name="문자열_중앙정렬" type="GROUP"/>
+  <resource name="메시지" type="GROUP"/>
+</resources>

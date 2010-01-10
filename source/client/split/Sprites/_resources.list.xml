@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+  <resource name="spr_kor1" type="RESOURCE"/>
+  <resource name="spr_kor2" type="RESOURCE"/>
+  <resource name="spr_button1" type="RESOURCE"/>
+  <resource name="spr_button2" type="RESOURCE"/>
+  <resource name="spr_button3" type="RESOURCE"/>
+  <resource name="spr_button4" type="RESOURCE"/>
+  <resource name="spr_button5" type="RESOURCE"/>
+  <resource name="spr_idps_join" type="RESOURCE"/>
+  <resource name="spr_idps_ok" type="RESOURCE"/>
+  <resource name="spr_buttom_mess_ok" type="RESOURCE"/>
+  <resource name="spr_b1" type="RESOURCE"/>
+  <resource name="spr_b2" type="RESOURCE"/>
+  <resource name="spr_b3" type="RESOURCE"/>
+  <resource name="spr_bar" type="RESOURCE"/>
+  <resource name="spr_scr_bar1" type="RESOURCE"/>
+  <resource name="spr_scr_bar2" type="RESOURCE"/>
+</resources>

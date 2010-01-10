@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+  <resource name="obj_ser_chatting" type="RESOURCE"/>
+  <resource name="obj_status_2" type="RESOURCE"/>
+  <resource name="obj_bar_2_1" type="RESOURCE"/>
+  <resource name="obj_bar_2_2" type="RESOURCE"/>
+  <resource name="obj_scr_bar2" type="RESOURCE"/>
+</resources>
