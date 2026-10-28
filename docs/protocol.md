@@ -24,4 +24,4 @@ Every exchange is made of a message ID and slots. `→` marks a server reply.
   - `→ id[8]` server: broadcasts the updated player list to everyone (slot 0 = player list)
 - `id[9]` client: leaves (slot 0 = own ID)
   - `→ id[8]` server: broadcasts the updated player list to everyone (slot 0 = player list)
-- `id[10]` client → all clients: global chat (slot 0 = one formatted line, `ID - chat text`). Broadcast between clients with no server handler
+- `id[10]` client → all clients: global chat (slot 0 = one complete line in the format `ID - chat text`). Clients broadcast it to each other with no server processing
